@@ -36,7 +36,7 @@ pipeline {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
           bat '''
           cd java-maven-sonar-argocd-helm-k8s\\spring-boot-app
-          set JAVA_HOME=C:\jdk-21
+          set JAVA_HOME=C:\\jdk-21
           set PATH=%JAVA_HOME%\bin;%PATH%
           mvn sonar:sonar -Dsonar.login=%SONAR_AUTH_TOKEN% -Dsonar.host.url=%SONAR_URL%
           '''
