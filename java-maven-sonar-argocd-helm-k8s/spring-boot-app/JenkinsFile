@@ -8,6 +8,10 @@ pipeline {
     GIT_USER_NAME = "shubham122334"
   }
 
+  tools {
+    jdk 'jdk17'
+    maven 'maven'
+  }
   stages {
 
     stage('Checkout') {
