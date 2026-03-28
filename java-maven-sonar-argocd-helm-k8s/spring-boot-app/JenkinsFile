@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     SONAR_URL = "http://localhost:9000"   // change if remote
-    DOCKER_IMAGE = "abhishekf5/ultimate-cicd:${BUILD_NUMBER}"
+    DOCKER_IMAGE = "shubham1999iimt078/ultimate-cicd:${BUILD_NUMBER}"
     GIT_REPO_NAME = "Jenkins-Hero"
     GIT_USER_NAME = "shubham122334"
   }
