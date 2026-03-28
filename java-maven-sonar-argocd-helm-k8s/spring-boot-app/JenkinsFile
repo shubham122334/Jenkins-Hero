@@ -74,7 +74,7 @@ passwordVariable: 'DOCKER_PASS')]) {
           git config user.email "shubham1999.iimt@gmail.com"
           git config user.name "shubham122334"
 
-          powershell -Command "(Get-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml) -replace 'replaceImageTag','%BUILD_NUMBER%' | Set-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml"
+          powershell -Command "(Get-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml) -replace 'image: .*','image: shubham1999iimt078/ultimate-cicd:%BUILD_NUMBER%' | Set-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml"
 
           git add .
           git commit -m "Update image tag %BUILD_NUMBER%"
