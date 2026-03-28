@@ -71,8 +71,8 @@ passwordVariable: 'DOCKER_PASS')]) {
       steps {
         withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
           bat '''
-          git config user.email "abhishek.xyz@gmail.com"
-          git config user.name "Abhishek Veeramalla"
+          git config user.email "shubham1999.iimt@gmail.com"
+          git config user.name "shubham122334"
 
           powershell -Command "(Get-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml) -replace 'replaceImageTag','%BUILD_NUMBER%' | Set-Content java-maven-sonar-argocd-helm-k8s\\spring-boot-app-manifests\\deployment.yml"
 
