@@ -3,9 +3,9 @@ pipeline {
 
   environment {
     SONAR_URL = "http://localhost:9000"   // change if remote
-    DOCKER_IMAGE = "abhishekf5/ultimate-cicd:%BUILD_NUMBER%"
-    GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
-    GIT_USER_NAME = "iam-veeramalla"
+    DOCKER_IMAGE = "abhishekf5/ultimate-cicd:${BUILD_NUMBER}"
+    GIT_REPO_NAME = "Jenkins-Hero"
+    GIT_USER_NAME = "shubham122334"
   }
 
   stages {
@@ -13,7 +13,7 @@ pipeline {
     stage('Checkout') {
       steps {
         bat 'echo Code checkout successful'
-        // git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+        // git branch: 'main', url: 'https://github.com/shubham122334/Jenkins-Hero.git'
       }
     }
 
